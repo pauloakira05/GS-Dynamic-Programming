@@ -90,6 +90,13 @@ O problema é equivalente à **Mochila 0/1**, com a seguinte formulação:
 
 ## 3. Estrutura Geral do Código
 
+Todas as partes de **resolução do problema** que envolvem algoritmos (ordenar e escolher módulos) foram
+implementadas usando **recursão + memoização**, conforme a exigência da disciplina:
+
+- `merge_sort_por_campo` → Merge Sort recursivo com dicionário de memoização;
+- `mochila_otima` → Programação Dinâmica (Mochila 0/1) com recursão e memoização no estado `(i, t)`.
+
+
 O projeto consiste em um único arquivo Python (`GS-Dynamic-Programming.py`) com as seguintes partes principais:
 
 - **Funções utilitárias**:
@@ -876,5 +883,17 @@ Para reforçar o atendimento ao requisito do professor (“**explicar cada funç
 - **`gerar_relatorio(tabela, t_total, ganho, ids_escolhidos)`** → monta e exibe o relatório em console, calculando horas usadas, ordenando módulos por prazo e retornando um dicionário com todas as informações;
 - **`salvar_lista_em_csv(caminho, itens)`** → exporta qualquer lista de módulos para CSV;
 - **`exportar_relatorio_csv(caminho, resumo)`** → exporta o último relatório (resumo + módulos escolhidos) para CSV.
+
+---
+
+## 9. Checklist dos Requisitos da Disciplina
+
+- ✅ Formulação do problema (entradas, saídas, objetivo) – Seção 2  
+- ✅ Ordenação dos dados (Merge Sort recursivo + memoização) – Seção 5.6  
+- ✅ Uso de recursão + memoização nas funções principais (merge sort e mochila) – Seções 5.6 e 5.7  
+- ✅ Uso da ideia da mochila 0/1 para resolver o problema – Seções 2.3 e 5.7  
+- ✅ Estrutura de saída (relatórios em console + CSV) – Seções 5.8, 5.9 e 5.10  
+- ✅ Explicação de cada função e estrutura criada – Seção 5 e resumo na Seção 8  
+- ✅ Pelo menos 20 informações na base do problema (módulos id 1 a 20) – Seção 4.1
 
 ---
